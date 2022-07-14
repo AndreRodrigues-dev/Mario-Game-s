@@ -15,12 +15,6 @@ const loop = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
     const cloudsPosition = clouds.offsetLeft;
-    let dificult = 0;
-
-    function incrementDificult() {
-        dificult++;
-        
-    }
 
     if(pipePosition <= 120 && pipePosition > 0 && marioPosition < 110) {
         pipe.style.animation = 'none';
@@ -36,7 +30,8 @@ const loop = setInterval(() => {
         mario.style.width = '75px';
         mario.style.marginLeft = '50px';
 
-        clearInterval(loop);
+        document.location.reload(true);
+        alert("Do you wanna play again?");
     }
 }, 10)
 

@@ -30,8 +30,7 @@ const loop = setInterval(() => {
         mario.style.width = '75px';
         mario.style.marginLeft = '50px';
 
-        document.location.reload(true);
-        alert("Do you wanna play again?");
+        clearInterval(loop)
     }
 }, 10)
 
